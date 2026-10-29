@@ -15,6 +15,7 @@ type Project = {
   icon: 'bake' | 'gigsterr' | 'norse';
   link: string;
   appleLink: string;
+  appleLinkLabel: string;
 };
 
 const projects: Project[] = [
@@ -28,7 +29,8 @@ const projects: Project[] = [
     theme: 'peach',
     icon: 'bake',
     link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.bakemate',
-    appleLink: 'https://apps.apple.com/gb/app/bake-mate/id6753301880'
+    appleLink: 'https://apps.apple.com/gb/app/bake-mate/id6753301880',
+    appleLinkLabel: 'Find it on Apple'
   },
   {
     number: '02',
@@ -40,7 +42,8 @@ const projects: Project[] = [
     theme: 'blue',
     icon: 'gigsterr',
     link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterr',
-    appleLink: 'https://apps.apple.com/za/search?term=Gigsterr'
+    appleLink: 'https://apps.apple.com/za/search?term=Gigsterr',
+    appleLinkLabel: 'Search Apple App Store'
   },
   {
     number: '03',
@@ -52,7 +55,8 @@ const projects: Project[] = [
     theme: 'lavender',
     icon: 'gigsterr',
     link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterprovider',
-    appleLink: 'https://apps.apple.com/za/app/gigsterr-provider/id6742649992'
+    appleLink: 'https://apps.apple.com/za/app/gigsterr-provider/id6742649992',
+    appleLinkLabel: 'Find it on Apple'
   },
   {
     number: '04',
@@ -64,7 +68,8 @@ const projects: Project[] = [
     theme: 'green',
     icon: 'norse',
     link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.norsewisdom',
-    appleLink: 'https://apps.apple.com/us/app/norse-wisdom/id6763571749'
+    appleLink: 'https://apps.apple.com/us/app/norse-wisdom/id6763571749',
+    appleLinkLabel: 'Find it on Apple'
   },
 ];
 
@@ -187,7 +192,7 @@ function App() {
                   <div className="stack-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
                   <div className="project-store-links" aria-label={`${project.name} app store links`}>
                     <a className="store-link store-link-google" href={project.link} target="_blank" rel="noopener noreferrer"><Play size={14} fill="currentColor" /> Find it on Google Play <ArrowUpRight size={13} /></a>
-                    <a className="store-link store-link-apple" href={project.appleLink} target="_blank" rel="noopener noreferrer"><Apple size={14} /> Find it on Apple <ArrowUpRight size={13} /></a>
+                    <a className="store-link store-link-apple" href={project.appleLink} target="_blank" rel="noopener noreferrer"><Apple size={14} /> {project.appleLinkLabel} <ArrowUpRight size={13} /></a>
                   </div>
                   <button className="project-expand" onClick={() => setExpandedProject(expandedProject === project.name ? null : project.name)} aria-expanded={expandedProject === project.name}>
                     {expandedProject === project.name ? 'Hide contribution' : 'What I contributed'} {expandedProject === project.name ? <X size={14} /> : <ArrowUpRight size={14} />}
