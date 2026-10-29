@@ -25,6 +25,7 @@ const projects: Project[] = [
     stack: ['React', 'TypeScript', 'Capacitor', 'REST APIs', 'Subscriptions'],
     theme: 'peach',
     icon: 'bake',
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.bakemate'
   },
   {
     number: '02',
@@ -35,6 +36,7 @@ const projects: Project[] = [
     stack: ['JavaScript', 'React', 'CSS', 'API integration'],
     theme: 'blue',
     icon: 'gigsterr',
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterr'
   },
   {
     number: '03',
@@ -45,16 +47,18 @@ const projects: Project[] = [
     stack: ['JavaScript', 'React', 'CSS', 'API integration'],
     theme: 'lavender',
     icon: 'gigsterr',
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterprovider'
   },
   {
     number: '04',
     name: 'Norse Wisdom',
-    category: 'Independent project · Research & development',
-    summary: 'A focused digital collection of Norse literature, wisdom and mythology.',
-    contribution: 'Independently researched, designed, developed and published the application. This included checking poem usage for copyright concerns and testing features through to release.',
+    category: 'Independent project · Research & literature',
+    summary: 'A focused digital collection of Norse literature, sagas and mythology.',
+    contribution: 'Independently researched, designed, developed and published the application. This included checking poem usage for copyright concerns and testing features through to release and active further development and maintenance.',
     stack: ['React', 'TypeScript', 'Vite', 'Capacitor'],
     theme: 'green',
     icon: 'norse',
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.norsewisdom'
   },
 ];
 
