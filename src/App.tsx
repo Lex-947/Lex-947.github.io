@@ -75,8 +75,24 @@ function ProjectArtwork({ project }: { project: Project }) {
         <div className="bake-window">
           <div className="mini-topline"><span /><span /><span /></div>
           <div className="bake-heading">a little more<br /><i>delicious.</i></div>
-          <div className="cake-illustration"><span className="cake-top" /><span className="cake-body" /><span className="cake-plate" /><span className="berry berry-one" /><span className="berry berry-two" /></div>
-          <div className="bake-bottom"><span>YOUR NEXT FAVOURITE</span><span className="mini-pill">Explore recipes ↗</span></div>
+          <div className="cake-illustration">
+            <span className="cake-top" />
+            <span className="cake-body" />
+            <span className="cake-plate" />
+            <span className="berry berry-one" />
+            <span className="berry berry-two" />
+          </div>
+          <div className="bake-bottom">
+            <span>YOUR NEXT FAVOURITE</span>
+              <a
+                className="mini-pill"
+                href="https://play.google.com/store/apps/details?id=com.cyberbyte.bakemate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Explore recipes ↗
+              </a>
+          </div>
         </div>
         <span className="art-stamp">BAKE<br />SOMETHING<br />GOOD</span>
       </div>
