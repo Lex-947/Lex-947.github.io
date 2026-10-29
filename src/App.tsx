@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, Braces, Check, Code2,
-  Github, Layers3, Mail, Menu, Moon, Sun, X,
+  Apple, Github, Layers3, Mail, Menu, Moon, Play, Sun, X,
 } from 'lucide-react';
 
 type Project = {
@@ -13,6 +13,8 @@ type Project = {
   stack: string[];
   theme: string;
   icon: 'bake' | 'gigsterr' | 'norse';
+  link: string;
+  appleLink: string;
 };
 
 const projects: Project[] = [
@@ -25,7 +27,8 @@ const projects: Project[] = [
     stack: ['React', 'TypeScript', 'Capacitor', 'REST APIs', 'Subscriptions'],
     theme: 'peach',
     icon: 'bake',
-    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.bakemate'
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.bakemate',
+    appleLink: 'https://apps.apple.com/gb/app/bake-mate/id6753301880'
   },
   {
     number: '02',
@@ -36,7 +39,8 @@ const projects: Project[] = [
     stack: ['JavaScript', 'React', 'CSS', 'API integration'],
     theme: 'blue',
     icon: 'gigsterr',
-    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterr'
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterr',
+    appleLink: 'https://apps.apple.com/za/search?term=Gigsterr'
   },
   {
     number: '03',
@@ -47,7 +51,8 @@ const projects: Project[] = [
     stack: ['JavaScript', 'React', 'CSS', 'API integration'],
     theme: 'lavender',
     icon: 'gigsterr',
-    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterprovider'
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.gigsterprovider',
+    appleLink: 'https://apps.apple.com/za/app/gigsterr-provider/id6742649992'
   },
   {
     number: '04',
@@ -58,7 +63,8 @@ const projects: Project[] = [
     stack: ['React', 'TypeScript', 'Vite', 'Capacitor'],
     theme: 'green',
     icon: 'norse',
-    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.norsewisdom'
+    link: 'https://play.google.com/store/apps/details?id=com.cyberbyte.norsewisdom',
+    appleLink: 'https://apps.apple.com/us/app/norse-wisdom/id6763571749'
   },
 ];
 
@@ -71,7 +77,7 @@ const skillGroups = [
 function ProjectArtwork({ project }: { project: Project }) {
   if (project.icon === 'bake') {
     return (
-      <div className={`project-art ${project.theme}`} aria-hidden="true">
+      <div className={`project-art ${project.theme}`}>
         <div className="bake-window">
           <div className="mini-topline"><span /><span /><span /></div>
           <div className="bake-heading">a little more<br /><i>delicious.</i></div>
@@ -179,6 +185,10 @@ function App() {
                   <h3>{project.name}</h3>
                   <p className="project-summary">{project.summary}</p>
                   <div className="stack-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
+                  <div className="project-store-links" aria-label={`${project.name} app store links`}>
+                    <a className="store-link store-link-google" href={project.link} target="_blank" rel="noopener noreferrer"><Play size={14} fill="currentColor" /> Find it on Google Play <ArrowUpRight size={13} /></a>
+                    <a className="store-link store-link-apple" href={project.appleLink} target="_blank" rel="noopener noreferrer"><Apple size={14} /> Find it on Apple <ArrowUpRight size={13} /></a>
+                  </div>
                   <button className="project-expand" onClick={() => setExpandedProject(expandedProject === project.name ? null : project.name)} aria-expanded={expandedProject === project.name}>
                     {expandedProject === project.name ? 'Hide contribution' : 'What I contributed'} {expandedProject === project.name ? <X size={14} /> : <ArrowUpRight size={14} />}
                   </button>
