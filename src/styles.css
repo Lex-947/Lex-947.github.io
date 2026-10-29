@@ -821,6 +821,40 @@ h1{
     color:var(--muted)
 }
 
+.project-store-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:0 0 22px
+}
+
+.store-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:10px 11px;
+    border:1px solid var(--line);
+    border-radius:3px;
+    font-size:10px;
+    color:var(--text);
+    transition:transform .2s,border-color .2s,color .2s,background .2s
+}
+
+.store-link:hover{
+    transform:translateY(-2px);
+    border-color:var(--accent);
+    color:var(--accent)
+}
+
+.store-link-google{
+    background:var(--panel)
+}
+
+.store-link-apple{
+    background:transparent
+}
+
 .project-expand{
     display:inline-flex;
     align-items:center;
