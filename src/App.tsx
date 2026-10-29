@@ -144,7 +144,12 @@ function App() {
   return (
     <div className={`site-shell ${dark ? 'theme-dark' : 'theme-light'}`}>
       <header className="site-header">
-        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Lex home"><span className="wordmark-mark">L<span>.</span></span><span className="wordmark-label">LEX / DEVELOPER</span></a>
+        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="AJ home">
+          <span className="wordmark-mark">AJ
+            <span>.</span>
+          </span>
+          <span className="wordmark-label">AJ / DEVELOPER</span>
+        </a>
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`} aria-label="Main navigation">
           <a href="#work" onClick={closeMenu}>Work <span>01</span></a>
           <a href="#about" onClick={closeMenu}>About <span>02</span></a>
