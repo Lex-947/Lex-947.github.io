@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, Braces, Check, Code2,
-  Apple, Github, Layers3, Mail, Menu, Moon, Play, Sun, X,
+  ArrowDownRight, ArrowRight, ArrowUpRight, Braces, Check, Code2, Apple, Download, Github, Layers3, Mail, Menu, Moon, Play, Sun, X, BookOpen
 } from 'lucide-react';
 
 type Project = {
@@ -155,6 +154,7 @@ function App() {
           <a href="#about" onClick={closeMenu}>About <span>02</span></a>
           <a href="#skills" onClick={closeMenu}>Toolkit <span>03</span></a>
           <a href="#contact" onClick={closeMenu}>Let's talk <span>04</span></a>
+          <a href="#reference" onClick={closeMenu}>References <span>05</span></a>
         </nav>
         <div className="header-actions">
           <button className="icon-button theme-toggle" onClick={() => setDark(!dark)} aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'} title={dark ? 'Switch to light theme' : 'Switch to dark theme'}>{dark ? <Sun size={17} /> : <Moon size={17} />}</button>
@@ -168,7 +168,7 @@ function App() {
             <div className="eyebrow"><span className="status-dot" /> SOFTWARE DEVELOPER <span className="eyebrow-divider">/</span> SOUTH AFRICA</div>
             <h1>I make useful<br />things <span className="serif-word">work.</span><span className="hero-period">✳</span></h1>
             <p className="hero-lede">I'm AJ, a software developer who enjoys turning messy problems into thoughtful, practical web and mobile experiences.</p>
-            <div className="hero-actions"><a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={16} /></a><a className="text-link" href="#about">A little about me <ArrowRight size={15} /></a></div>
+            <div className="hero-actions"><a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={16} /></a><a className="button button-secondary" href="/Resume.pdf" download="AJ-Resume.pdf">Download my resume <Download size={16} /></a><a className="text-link" href="#about">A little about me <ArrowRight size={15} /></a></div>
             <div className="hero-footnote"><span className="mono-label">CURRENTLY</span><span>Building, debugging, learning. Repeat.</span></div>
           </div>
           <div className="hero-visual" aria-label="Abstract illustration of software building blocks">
@@ -261,9 +261,34 @@ function App() {
             <a className="button button-primary" href="mailto:adriaandupisani13@gmail.com">Get in touch <Mail size={16} /></a>
             <a className="button button-secondary" href="https://github.com/Lex-947" target="_blank" rel="noreferrer"><Github size={16} /> GitHub profile <ArrowUpRight size={14} /></a>
           </div>
-          <div className="contact-bottom">
-            <span>JOHANNESBURG, SOUTH AFRICA</span>
-            <span>MADE WITH REACT, TYPESCRIPT & CSS</span>
+        </section>
+
+        <section id="reference" className="about-section section-wrap section-space">
+          <div className="about-left">
+            <div className="eyebrow">References <span className="eyebrow-divider">/</span> 04</div>
+            <h2>Looking for a<br /><span className="serif-word">Reference ?</span></h2>
+
+            <div className="about-stamp">
+              <BookOpen size={29} strokeWidth={1.3} />
+              <span>READ<br />CITE<br />REFERENCE</span>
+            </div>
+          </div>
+          <div className="about-copy">
+            <p className="about-lede">
+              Need to ask someone other than me about my work?<br />
+              Try these
+            </p>
+            <p>
+              Greg Lawson<br/>
+              CEO of Cyberbyte Systems Solutions (Current employer)<br/>
+              <b>Phone:</b> <a className="text-link" href="tel:0844080673" target="_blank" rel="noreferrer">084 408 0673<ArrowUpRight size={15} /></a>
+              <b>Email:</b> <a className="text-link" href="mailto:greg@cyberbytesystems.com" target="_blank" rel="noreferrer">greg@cyberbytesystems.com<ArrowUpRight size={15} /></a>
+            </p>
+            <p>
+              Jolandi Appelgryn Dreyer<br/>
+              Former CEO of Gezundheit Zentrum, Current CEO of Slow By Nature (Former Employer)<br/>
+              <b>Phone:</b> <a className="text-link" href="tel:0827712638" target="_blank" rel="noreferrer">082 771 2638<ArrowUpRight size={15} /></a>
+            </p>
           </div>
         </section>
       </main>
@@ -275,6 +300,10 @@ function App() {
         </a>
           <span>Thoughtful work. Useful software.</span>
           <a href="#top">Back to top ↑</a>
+          <div>
+            <span>JOHANNESBURG, SOUTH AFRICA</span>
+            <span>MADE WITH REACT, TYPESCRIPT & CSS</span>
+          </div>
           <span className="footer-year">© {new Date().getFullYear()}</span>
       </footer>
     </div>
