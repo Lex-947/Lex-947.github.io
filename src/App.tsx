@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, Braces, Check, Code2,
-  Apple, Github, Layers3, Mail, Menu, Moon, Play, Sun, X,
+  ArrowDownRight, ArrowRight, ArrowUpRight, Braces, Check, Code2, Apple, Github, Layers3, Mail, Menu, Moon, Play, Sun, X, BookOpen
 } from 'lucide-react';
 
 type Project = {
@@ -273,8 +272,10 @@ function App() {
             <div className="eyebrow">References <span className="eyebrow-divider">/</span> 04</div>
             <h2>Looking for a<br /><span className="serif-word">Reference ?</span></h2>
 
-            {/* Make this div stamp fit the section */}
-            <div className="about-stamp"><Code2 size={29} strokeWidth={1.3} /><span>THINK<br />MAKE<br />REFINE</span></div>
+            <div className="about-stamp">
+              <BookOpen size={29} strokeWidth={1.3} />
+              <span>READ<br />CITE<br />REFERENCE</span>
+            </div>
           </div>
           <div className="about-copy">
             <p className="about-lede">
