@@ -155,6 +155,7 @@ function App() {
           <a href="#about" onClick={closeMenu}>About <span>02</span></a>
           <a href="#skills" onClick={closeMenu}>Toolkit <span>03</span></a>
           <a href="#contact" onClick={closeMenu}>Let's talk <span>04</span></a>
+          <a href="#reference" onClick={closeMenu}>References <span>05</span></a>
         </nav>
         <div className="header-actions">
           <button className="icon-button theme-toggle" onClick={() => setDark(!dark)} aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'} title={dark ? 'Switch to light theme' : 'Switch to dark theme'}>{dark ? <Sun size={17} /> : <Moon size={17} />}</button>
@@ -264,6 +265,33 @@ function App() {
           <div className="contact-bottom">
             <span>JOHANNESBURG, SOUTH AFRICA</span>
             <span>MADE WITH REACT, TYPESCRIPT & CSS</span>
+          </div>
+        </section>
+
+        <section id="reference" className="about-section section-wrap section-space">
+          <div className="about-left">
+            <div className="eyebrow">References <span className="eyebrow-divider">/</span> 04</div>
+            <h2>Looking for a<br /><span className="serif-word">Reference ?</span></h2>
+
+            {/* Make this div stamp fit the section */}
+            <div className="about-stamp"><Code2 size={29} strokeWidth={1.3} /><span>THINK<br />MAKE<br />REFINE</span></div>
+          </div>
+          <div className="about-copy">
+            <p className="about-lede">
+              Need to ask someone other than me about my work?<br />
+              Try these
+            </p>
+            <p>
+              Greg Lawson<br/>
+              CEO of Cyberbyte Systems Solutions (Current employer)<br/>
+              <b>Phone:</b> <a className="text-link" href="tel:0844080673" target="_blank" rel="noreferrer">084 408 0673<ArrowUpRight size={15} /></a>
+              <b>Email:</b> <a className="text-link" href="mailto:greg@cyberbytesystems.com" target="_blank" rel="noreferrer">greg@cyberbytesystems.com<ArrowUpRight size={15} /></a>
+            </p>
+            <p>
+              Jolandi Appelgryn Dreyer<br/>
+              Former CEO of Gezundheit Zentrum, Current CEO of Slow By Nature (Former Employer)<br/>
+              <b>Phone:</b> <a className="text-link" href="tel:0827712638" target="_blank" rel="noreferrer">082 771 2638<ArrowUpRight size={15} /></a>
+            </p>
           </div>
         </section>
       </main>
