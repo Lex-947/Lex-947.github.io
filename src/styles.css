@@ -1077,6 +1077,15 @@ h1{
     gap:20px
 }
 
+.site-footer>div{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    font:9px var(--mono);
+    letter-spacing:.08em;
+    color:var(--faint)
+}
+
 .site-footer>span,.site-footer>a:not(.wordmark){
     font-size:10px;
     color:var(--muted)
